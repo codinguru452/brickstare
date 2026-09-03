@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrickStare - Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo"><i class="fa-solid fa-truck-fast"></i> BrickStare</div>
+            <nav>
+    <a href="index.html" class="nav-link"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+    <a href="deliveries.html" class="nav-link"><i class="fa-solid fa-box-open"></i> All Deliveries</a>
+    <a href="riders.html" class="nav-link"><i class="fa-solid fa-motorcycle"></i> Riders</a>
+    <a href="reports.html" class="nav-link active"><i class="fa-solid fa-chart-line"></i> Reports</a>
+<button type="button" class="nav-link logout-link" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h2>Reports & Analytics</h2>
+                <div class="user-profile">
+                    <span id="dispatcherName">Dispatcher</span>
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </header>
+
+            <!-- Summary Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Orders (Today)</h3>
+                    <p id="report-total">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Success Rate</h3>
+                    <p id="report-rate">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Avg Delivery Time</h3>
+                    <p id="report-average">—</p>
+                </div>
+            </div>
+
+            <!-- Status Breakdown -->
+            <div class="split-view">
+                <div class="panel">
+                    <h3><i class="fa-solid fa-chart-pie"></i> Delivery Status Breakdown</h3>
+                    <div id="status-breakdown" class="breakdown-list"></div>
+                </div>
+
+                <div class="panel">
+                    <h3><i class="fa-solid fa-trophy"></i> Top Performing Riders</h3>
+                    <div id="top-riders" class="breakdown-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="reports.js"></script>
+<script src="session.js"></script>
+</body>
+</html>
